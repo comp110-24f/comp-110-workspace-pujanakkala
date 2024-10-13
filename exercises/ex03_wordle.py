@@ -19,13 +19,15 @@ def contains_char(secret_word: str, char_guess: str) -> bool:
     index: int = 0
     while index < len(secret_word):
         if secret_word[index] == char_guess:
-            return True  # want to return a bool so that it can be used in the elif in the next function
+            return True  # want to return a bool so that it can be used in the elif
+            # in the next function
         index += 1
     return False
 
 
 def emojified(guess: str, secret_word: str) -> str:
-    """function that will show the user which letters of their guess are in the secret word and where"""
+    """function that will show the user which letters of their guess are in the secret
+    word and where"""
     assert len(guess) == len(
         secret_word
     )  # if they don't have the same length the code won't run
@@ -74,5 +76,6 @@ def main(secret_word: str) -> None:
 
 if (
     __name__ == "__main__"
-):  # so that when importing the function it won't run and we can use whatever code word we want each time
+):  # so that when importing the function it won't run and we can use whatever
+    # code word we want each time
     main(secret_word="codes")
