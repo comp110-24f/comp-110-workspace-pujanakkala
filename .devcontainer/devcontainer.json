@@ -22,7 +22,9 @@ It ensures everyone's VSCode is setup properly for success in the course.
                 "ms-python.vscode-pylance",
                 "ms-python.black-formatter",
                 "ms-python.flake8",
-                "ms-toolsai.jupyter"
+                "ms-toolsai.jupyter",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers"
             ],
             "settings": {
                 "files.autoSave": "onWindowChange",
