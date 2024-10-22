@@ -11,7 +11,7 @@ def test_get_first() -> None:
 def test_remove_first_ret_value() -> None:
     """test that remove first returns None."""
     fruits: list[str] = ["apples", "oranges", "bananas"]
-    assert remove_first(fruits) == None
+    assert if remove_first(fruits) is None
 
 
 def test_remove_first_behavior() -> None:
