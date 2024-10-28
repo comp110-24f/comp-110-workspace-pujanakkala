@@ -12,33 +12,29 @@ def invert(input: dict[str, str]) -> dict[str, str]:
     return new_dict
 
 
-def favorite_colors(input: dict[str, str]) -> str:
-    """function that takes a list of favorite colors and returns the most popular color"""
+def favorite_color(input: dict[str, str]) -> str:
+    """takes a list of favorite colors and returns the most popular color"""
     color_count: dict[str, int] = {}
-    color_order = []
-
+    color_order: list[str] = []
     for name in input:
-        color: str = input[name]
-
+        color = input[name]
         if color in color_count:
             color_count[color] += 1
         else:
             color_count[color] = 1
             color_order.append(color)
-
-    max_color: str = color_order[0]
-    max_count: int = color_count[max_color]
-
+    max_color: str = ""
+    max_count: int = 0
     for color in color_order:
-        if color_count[color] > max_count:
+        count = color_count[color]
+        if count > max_count:
             max_color = color
-            max_count = color_count[color]
-
+            max_count = count
     return max_color
 
 
 def count(input: list[str]) -> dict[str, int]:
-    """function that creates a dict with the unique values of an input and their frequency"""
+    """creates a dict with the unique values of an input and their frequency"""
     new_dict: dict[str, int] = {}
     for elem in input:
         if elem in new_dict:
